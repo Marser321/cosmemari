@@ -1,0 +1,161 @@
+'use client';
+
+import { motion } from 'motion/react';
+import { AnimatedSection } from '@/components/ui/AnimatedSection';
+import { Phone, Mail, MapPin, Clock, MessageCircle, Send } from 'lucide-react';
+
+export function ContactSection() {
+    return (
+        <section id="contacto" className="section-padding bg-white relative overflow-hidden">
+            {/* Decoración */}
+            <div className="absolute bottom-0 right-0 w-[400px] h-[400px] rounded-full bg-cyan-50/50 blur-[100px] pointer-events-none" />
+
+            <div className="max-w-6xl mx-auto relative z-10">
+                {/* Título */}
+                <AnimatedSection className="text-center mb-16">
+                    <span className="text-accent text-sm font-semibold uppercase tracking-widest">
+                        Contacto
+                    </span>
+                    <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold mt-3 mb-4 text-slate-900">
+                        Agendá tu{' '}
+                        <span className="text-gradient">consulta</span>
+                    </h2>
+                    <p className="text-slate-500 max-w-xl mx-auto">
+                        Estamos para ayudarte. Escribinos por WhatsApp o completá el formulario
+                        y te respondemos a la brevedad.
+                    </p>
+                </AnimatedSection>
+
+                <div className="grid lg:grid-cols-2 gap-10 lg:gap-16">
+                    {/* Info de contacto */}
+                    <AnimatedSection direction="left">
+                        <div className="space-y-8">
+                            {/* WhatsApp CTA */}
+                            <motion.a
+                                href="https://wa.me/59800000000?text=Hola%2C%20quiero%20agendar%20una%20consulta"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                whileHover={{ scale: 1.02 }}
+                                whileTap={{ scale: 0.98 }}
+                                className="flex items-center gap-4 bg-white rounded-2xl p-6 group cursor-pointer border border-green-100 shadow-[0_4px_24px_rgba(5,150,105,0.06)] hover:shadow-[0_8px_32px_rgba(5,150,105,0.12)] transition-shadow"
+                            >
+                                <div className="w-14 h-14 rounded-xl bg-green-50 border border-green-200/60 flex items-center justify-center group-hover:bg-green-100 transition-colors flex-shrink-0">
+                                    <MessageCircle size={26} className="text-green-600" />
+                                </div>
+                                <div>
+                                    <h4 className="font-display font-bold text-slate-800">WhatsApp</h4>
+                                    <p className="text-green-600 text-sm font-medium">Escribinos ahora →</p>
+                                </div>
+                            </motion.a>
+
+                            {/* Info items */}
+                            <div className="space-y-5">
+                                {[
+                                    { icono: Phone, label: 'Teléfono', valor: '+598 0000 0000' },
+                                    { icono: Mail, label: 'Email', valor: 'contacto@drdiegomari.com' },
+                                    { icono: MapPin, label: 'Ubicación', valor: 'Uruguay' },
+                                    { icono: Clock, label: 'Horarios', valor: 'Lun-Vie: 9:00 - 19:00' },
+                                ].map((item, i) => (
+                                    <motion.div
+                                        key={i}
+                                        initial={{ opacity: 0, x: -20 }}
+                                        whileInView={{ opacity: 1, x: 0 }}
+                                        viewport={{ once: true }}
+                                        transition={{ delay: 0.2 + i * 0.1 }}
+                                        className="flex items-center gap-4"
+                                    >
+                                        <div className="w-10 h-10 rounded-lg bg-cyan-50 border border-cyan-100 flex items-center justify-center flex-shrink-0">
+                                            <item.icono size={18} className="text-accent" />
+                                        </div>
+                                        <div>
+                                            <p className="text-slate-400 text-xs uppercase tracking-wider">{item.label}</p>
+                                            <p className="text-slate-800 text-sm font-medium">{item.valor}</p>
+                                        </div>
+                                    </motion.div>
+                                ))}
+                            </div>
+                        </div>
+                    </AnimatedSection>
+
+                    {/* Formulario */}
+                    <AnimatedSection direction="right" delay={0.2}>
+                        <form
+                            className="bg-white rounded-2xl p-6 sm:p-8 space-y-5 border border-slate-100 shadow-[0_8px_40px_rgba(15,23,42,0.06)]"
+                            onSubmit={(e) => e.preventDefault()}
+                        >
+                            <div className="grid sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label htmlFor="nombre" className="block text-xs font-medium text-slate-500 mb-2 uppercase tracking-wider">
+                                        Nombre
+                                    </label>
+                                    <input
+                                        id="nombre"
+                                        type="text"
+                                        placeholder="Tu nombre"
+                                        className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm text-slate-800 placeholder:text-slate-300 focus:outline-none focus:border-cyan-300 focus:ring-2 focus:ring-cyan-100 transition-colors"
+                                    />
+                                </div>
+                                <div>
+                                    <label htmlFor="telefono" className="block text-xs font-medium text-slate-500 mb-2 uppercase tracking-wider">
+                                        Teléfono
+                                    </label>
+                                    <input
+                                        id="telefono"
+                                        type="tel"
+                                        placeholder="Tu teléfono"
+                                        className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm text-slate-800 placeholder:text-slate-300 focus:outline-none focus:border-cyan-300 focus:ring-2 focus:ring-cyan-100 transition-colors"
+                                    />
+                                </div>
+                            </div>
+
+                            <div>
+                                <label htmlFor="servicio" className="block text-xs font-medium text-slate-500 mb-2 uppercase tracking-wider">
+                                    Servicio de interés
+                                </label>
+                                <select
+                                    id="servicio"
+                                    className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm text-slate-800 focus:outline-none focus:border-cyan-300 focus:ring-2 focus:ring-cyan-100 transition-colors appearance-none"
+                                >
+                                    <option value="">Seleccioná un servicio</option>
+                                    <option value="blanqueamiento">Blanqueamiento Dental</option>
+                                    <option value="bruxismo">Bruxismo</option>
+                                    <option value="carillas">Carillas Dentales</option>
+                                    <option value="cirugia">Cirugía Bucal</option>
+                                    <option value="implantes">Implantes Dentales</option>
+                                    <option value="general">Odontología General</option>
+                                    <option value="ninos">Odontología para Niños</option>
+                                    <option value="ortodoncia">Ortodoncia</option>
+                                    <option value="periodoncia">Periodoncia</option>
+                                    <option value="rayos">Rayos X</option>
+                                    <option value="conducto">Tratamiento de Conducto</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label htmlFor="mensaje" className="block text-xs font-medium text-slate-500 mb-2 uppercase tracking-wider">
+                                    Mensaje
+                                </label>
+                                <textarea
+                                    id="mensaje"
+                                    rows={4}
+                                    placeholder="Contanos en qué podemos ayudarte..."
+                                    className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm text-slate-800 placeholder:text-slate-300 focus:outline-none focus:border-cyan-300 focus:ring-2 focus:ring-cyan-100 transition-colors resize-none"
+                                />
+                            </div>
+
+                            <motion.button
+                                whileHover={{ scale: 1.02 }}
+                                whileTap={{ scale: 0.98 }}
+                                type="submit"
+                                className="btn-primary w-full flex items-center justify-center gap-2 text-base"
+                            >
+                                <Send size={18} />
+                                Enviar Mensaje
+                            </motion.button>
+                        </form>
+                    </AnimatedSection>
+                </div>
+            </div>
+        </section>
+    );
+}
