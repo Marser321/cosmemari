@@ -15,23 +15,23 @@ const jakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: 'Clínica Dental Dr. Diego Mari | Odontología Integral en Uruguay',
+  title: 'Clínica Dental OdontoPro | Odontología Integral de Excelencia',
   description:
-    'Clínica odontológica especializada en implantes dentales, ortodoncia, cirugía bucal y rehabilitación estética. Dr. Diego Mari, egresado de Udelar con especialización en cirugía sobre implantes.',
+    'Clínica odontológica especializada en implantes dentales, ortodoncia, cirugía bucal y rehabilitación estética. Equipo de especialistas con tecnología de última generación.',
   keywords: [
-    'dentista Uruguay',
+    'dentista',
     'implantes dentales',
     'ortodoncia',
     'clínica dental',
-    'Dr. Diego Mari',
+    'OdontoPro',
     'blanqueamiento dental',
     'cirugía bucal',
     'carillas dentales',
   ],
   openGraph: {
-    title: 'Clínica Dental Dr. Diego Mari',
+    title: 'Clínica Dental OdontoPro',
     description:
-      'Odontología integral, implantes y ortodoncia con tecnología de última generación.',
+      'Odontología integral, implantes y ortodoncia con tecnología de vanguardia.',
     type: 'website',
     locale: 'es_UY',
   },

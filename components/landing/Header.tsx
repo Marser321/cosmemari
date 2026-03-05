@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'motion/react';
 import { Menu, X, Phone } from 'lucide-react';
+import { BookingModal } from '@/components/ui/BookingModal';
 
 const navLinks = [
     { label: 'Inicio', href: '#inicio' },
@@ -16,6 +17,7 @@ const navLinks = [
 export function Header() {
     const [scrolled, setScrolled] = useState(false);
     const [mobileOpen, setMobileOpen] = useState(false);
+    const [isBookingOpen, setIsBookingOpen] = useState(false);
 
     useEffect(() => {
         const onScroll = () => setScrolled(window.scrollY > 50);
@@ -45,13 +47,12 @@ export function Header() {
             >
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex items-center justify-between h-16 md:h-20">
-                        {/* Logo */}
                         <Link href="/" className="flex items-center gap-3 group">
                             <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-accent to-cyan-500 flex items-center justify-center shadow-glow-accent group-hover:shadow-glow-accent-strong transition-shadow duration-300">
-                                <span className="text-white font-display font-bold text-lg">DM</span>
+                                <span className="text-white font-display font-bold text-lg">OP</span>
                             </div>
                             <div className="hidden sm:flex flex-col">
-                                <span className="font-display font-bold text-sm tracking-wide text-text-primary">Dr. Diego Mari</span>
+                                <span className="font-display font-bold text-sm tracking-wide text-text-primary">OdontoPro</span>
                                 <span className="text-xs text-text-muted -mt-0.5">Clínica Dental</span>
                             </div>
                         </Link>
@@ -75,12 +76,12 @@ export function Header() {
                                 <Phone size={16} />
                                 <span>Llamar</span>
                             </a>
-                            <a
-                                href="#contacto"
+                            <button
+                                onClick={() => setIsBookingOpen(true)}
                                 className="btn-primary text-sm !py-2.5 !px-5"
                             >
                                 Agendar Cita
-                            </a>
+                            </button>
                         </div>
 
                         {/* Hamburger Mobile */}
@@ -125,20 +126,21 @@ export function Header() {
                                     {link.label}
                                 </motion.a>
                             ))}
-                            <motion.a
-                                href="#contacto"
-                                onClick={() => setMobileOpen(false)}
-                                initial={{ opacity: 0, scale: 0.9 }}
-                                animate={{ opacity: 1, scale: 1 }}
-                                transition={{ delay: 0.4 }}
+                            <button
+                                onClick={() => {
+                                    setMobileOpen(false);
+                                    setIsBookingOpen(true);
+                                }}
                                 className="btn-primary mt-4 text-lg"
                             >
                                 Agendar Cita
-                            </motion.a>
+                            </button>
                         </motion.nav>
                     </motion.div>
                 )}
             </AnimatePresence>
+
+            <BookingModal isOpen={isBookingOpen} onClose={() => setIsBookingOpen(false)} />
         </>
     );
 }

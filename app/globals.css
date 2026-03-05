@@ -3,56 +3,56 @@
 
 /* ============================================
    CLÍNICA DENTAL DR. DIEGO MARI
-   Sistema de Diseño — Light Mode Clínico Premium
+   Sistema de Diseño — Dark Mode Clínico Premium
    ============================================ */
 
 @theme {
   /* --- Fondos --- */
-  --color-bg-primary: #FFFFFF;
-  --color-bg-secondary: #F8FAFC;
-  --color-bg-tertiary: #F1F5F9;
-  --color-bg-card: #FFFFFF;
-  --color-bg-navy: #0F172A;
+  --color-bg-primary: #0A0A0A;
+  --color-bg-secondary: #111111;
+  --color-bg-tertiary: #1A1A1A;
+  --color-bg-card: #151515;
+  --color-bg-navy: #050505;
 
-  /* --- Glassmorphism Light --- */
-  --color-glass-surface: rgba(255, 255, 255, 0.75);
-  --color-glass-border: rgba(15, 23, 42, 0.08);
-  --color-glass-surface-heavy: rgba(255, 255, 255, 0.92);
+  /* --- Glassmorphism Dark --- */
+  --color-glass-surface: rgba(20, 20, 20, 0.75);
+  --color-glass-border: rgba(255, 255, 255, 0.08);
+  --color-glass-surface-heavy: rgba(20, 20, 20, 0.92);
 
-  /* --- Acentos --- */
-  --color-accent: #0891B2;
-  --color-accent-secondary: #0E7490;
-  --color-accent-light: #ECFEFF;
-  --color-accent-gold: #D97706;
+  /* --- Acentos (Rojos/Deslumbramiento) --- */
+  --color-accent: #DC2626; /* red-600 */
+  --color-accent-secondary: #991B1B; /* red-800 */
+  --color-accent-light: #FEF2F2; /* red-50 */
+  --color-accent-gold: #D97706; /* Opcional si hay VIP */
   --color-accent-gold-light: #FFFBEB;
   --color-accent-success: #059669;
-  --color-accent-danger: #DC2626;
+  --color-accent-danger: #ef4444; /* red-500 */
 
   /* --- Texto --- */
-  --color-text-primary: #0F172A;
-  --color-text-secondary: #475569;
+  --color-text-primary: #F8FAFC;
+  --color-text-secondary: #CBD5E1;
   --color-text-muted: #94A3B8;
-  --color-text-accent: #0891B2;
+  --color-text-accent: #EF4444;
 
   /* --- Tipografía --- */
   --font-display: var(--font-jakarta), system-ui, sans-serif;
   --font-body: var(--font-inter), system-ui, sans-serif;
 
-  /* --- Sombras Premium --- */
-  --shadow-glass: 0 8px 32px rgba(15, 23, 42, 0.06);
-  --shadow-glass-sm: 0 4px 16px rgba(15, 23, 42, 0.04);
-  --shadow-float: 0 20px 50px -12px rgba(15, 23, 42, 0.12);
-  --shadow-card: 0 4px 24px rgba(15, 23, 42, 0.06);
-  --shadow-card-hover: 0 12px 40px rgba(8, 145, 178, 0.12);
-  --shadow-glow-accent: 0 0 30px rgba(8, 145, 178, 0.15);
-  --shadow-glow-accent-strong: 0 0 40px rgba(8, 145, 178, 0.25);
+  /* --- Sombras Premium Dark --- */
+  --shadow-glass: 0 8px 32px rgba(0, 0, 0, 0.4);
+  --shadow-glass-sm: 0 4px 16px rgba(0, 0, 0, 0.3);
+  --shadow-float: 0 20px 50px -12px rgba(0, 0, 0, 0.5);
+  --shadow-card: 0 4px 24px rgba(0, 0, 0, 0.4);
+  --shadow-card-hover: 0 12px 40px rgba(220, 38, 38, 0.15);
+  --shadow-glow-accent: 0 0 30px rgba(220, 38, 38, 0.2);
+  --shadow-glow-accent-strong: 0 0 40px rgba(220, 38, 38, 0.4);
 
   /* --- Gradientes como background-image --- */
-  --background-image-hero-radial: radial-gradient(ellipse at 20% 50%, rgba(8, 145, 178, 0.06) 0%, transparent 50%), radial-gradient(ellipse at 80% 20%, rgba(14, 116, 144, 0.04) 0%, transparent 50%), radial-gradient(ellipse at 50% 100%, rgba(8, 145, 178, 0.03) 0%, transparent 50%);
-  --background-image-card-gradient: linear-gradient(135deg, rgba(8, 145, 178, 0.03) 0%, rgba(14, 116, 144, 0.01) 100%);
-  --background-image-text-gradient: linear-gradient(135deg, #0891B2, #0E7490, #0891B2);
+  --background-image-hero-radial: radial-gradient(ellipse at 20% 50%, rgba(220, 38, 38, 0.08) 0%, transparent 50%), radial-gradient(ellipse at 80% 20%, rgba(153, 27, 27, 0.05) 0%, transparent 50%), radial-gradient(ellipse at 50% 100%, rgba(220, 38, 38, 0.04) 0%, transparent 50%);
+  --background-image-card-gradient: linear-gradient(135deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.01) 100%);
+  --background-image-text-gradient: linear-gradient(135deg, #EF4444, #FCA5A5, #EF4444);
   --background-image-gold-gradient: linear-gradient(135deg, #D97706, #F59E0B, #D97706);
-  --background-image-cta-gradient: linear-gradient(135deg, #0891B2, #06B6D4);
+  --background-image-cta-gradient: linear-gradient(135deg, #DC2626, #EF4444);
 }
 
 /* --- Base --- */
@@ -61,8 +61,8 @@ html {
 }
 
 body {
-  background-color: #FFFFFF;
-  color: #0F172A;
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
   font-family: var(--font-body);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -71,44 +71,44 @@ body {
 /* --- Utilidades Custom --- */
 @layer utilities {
   .glass-panel {
-    background: rgba(255, 255, 255, 0.75);
+    background: rgba(20, 20, 20, 0.6);
     backdrop-filter: blur(24px);
     -webkit-backdrop-filter: blur(24px);
-    border: 1px solid rgba(15, 23, 42, 0.08);
-    box-shadow: 0 8px 32px rgba(15, 23, 42, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
   }
 
   .glass-panel-heavy {
-    background: rgba(255, 255, 255, 0.92);
+    background: rgba(10, 10, 10, 0.85);
     backdrop-filter: blur(40px);
     -webkit-backdrop-filter: blur(40px);
-    border: 1px solid rgba(15, 23, 42, 0.1);
-    box-shadow: 0 8px 32px rgba(15, 23, 42, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
   }
 
   .glass-card {
-    background: #FFFFFF;
-    border: 1px solid rgba(15, 23, 42, 0.06);
+    background: rgba(26, 26, 26, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.05);
     border-radius: 1rem;
-    box-shadow: 0 4px 24px rgba(15, 23, 42, 0.06);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
     transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
   }
 
   .glass-card:hover {
-    border-color: rgba(8, 145, 178, 0.2);
-    box-shadow: 0 12px 40px rgba(8, 145, 178, 0.12);
+    border-color: rgba(220, 38, 38, 0.3);
+    box-shadow: 0 12px 40px rgba(220, 38, 38, 0.15);
     transform: translateY(-4px);
   }
 
   .text-gradient {
-    background: linear-gradient(135deg, #0891B2, #0E7490);
+    background: linear-gradient(135deg, #EF4444, #FCA5A5);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
 
   .text-gradient-gold {
-    background: linear-gradient(135deg, #D97706, #F59E0B);
+    background: linear-gradient(135deg, #FACC15, #FEF08A);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -124,7 +124,7 @@ body {
     inset: -1px;
     border-radius: inherit;
     padding: 1px;
-    background: linear-gradient(135deg, rgba(8, 145, 178, 0.25), rgba(14, 116, 144, 0.08), rgba(8, 145, 178, 0.25));
+    background: linear-gradient(135deg, rgba(220, 38, 38, 0.4), rgba(153, 27, 27, 0.1), rgba(220, 38, 38, 0.4));
     -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
     mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
@@ -132,33 +132,33 @@ body {
   }
 
   .btn-primary {
-    background: linear-gradient(135deg, #0891B2, #06B6D4);
+    background: linear-gradient(135deg, #DC2626, #EF4444);
     color: #FFFFFF;
     font-weight: 700;
     border-radius: 9999px;
     padding: 0.875rem 2rem;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 20px rgba(8, 145, 178, 0.25);
+    box-shadow: 0 4px 20px rgba(220, 38, 38, 0.3);
   }
 
   .btn-primary:hover {
-    box-shadow: 0 8px 30px rgba(8, 145, 178, 0.4);
+    box-shadow: 0 8px 30px rgba(220, 38, 38, 0.5);
     transform: translateY(-2px) scale(1.02);
   }
 
   .btn-secondary {
     background: transparent;
-    color: #0891B2;
+    color: #F8FAFC;
     font-weight: 600;
     border-radius: 9999px;
     padding: 0.875rem 2rem;
-    border: 1.5px solid rgba(8, 145, 178, 0.3);
+    border: 1.5px solid rgba(255, 255, 255, 0.2);
     transition: all 0.3s ease;
   }
 
   .btn-secondary:hover {
-    background: rgba(8, 145, 178, 0.06);
-    border-color: rgba(8, 145, 178, 0.5);
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.4);
   }
 
   .section-padding {
@@ -204,11 +204,11 @@ body {
 
   0%,
   100% {
-    box-shadow: 0 0 20px rgba(8, 145, 178, 0.1);
+    box-shadow: 0 0 20px rgba(220, 38, 38, 0.15);
   }
 
   50% {
-    box-shadow: 0 0 40px rgba(8, 145, 178, 0.25);
+    box-shadow: 0 0 40px rgba(220, 38, 38, 0.35);
   }
 }
 
@@ -280,14 +280,14 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #F8FAFC;
+  background: var(--color-bg-primary);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(8, 145, 178, 0.2);
+  background: rgba(255, 255, 255, 0.1);
   border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(8, 145, 178, 0.4);
+  background: rgba(220, 38, 38, 0.4);
 }

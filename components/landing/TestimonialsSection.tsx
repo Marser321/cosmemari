@@ -8,7 +8,7 @@ const testimonios = [
     {
         nombre: 'María G.',
         tratamiento: 'Implantes Dentales',
-        texto: 'Tenía mucho miedo de los implantes, pero el Dr. Mari me explicó todo paso a paso. El resultado es increíble, no se nota la diferencia con mis dientes naturales. ¡Gracias!',
+        texto: 'Tenía mucho miedo de los implantes, pero el equipo de especialistas me explicó todo paso a paso. El resultado es increíble, no se nota la diferencia con mis dientes naturales. ¡Gracias!',
         estrellas: 5,
     },
     {

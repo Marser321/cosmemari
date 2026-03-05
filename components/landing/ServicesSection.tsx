@@ -25,21 +25,31 @@ const animacionEspecial: Record<string, string> = {
 
 export function ServicesSection() {
     return (
-        <section id="servicios" className="section-padding relative overflow-hidden bg-white">
-            {/* Decoración */}
-            <div className="absolute bottom-0 left-0 w-[500px] h-[500px] rounded-full bg-cyan-50/60 blur-[120px] pointer-events-none" />
+        <section id="servicios" className="section-padding relative overflow-hidden bg-[#0A0A0A]">
+            {/* Fondo decorativo generado con IA */}
+            <div className="absolute inset-0 z-0">
+                <Image
+                    src="/images/services-bg.png"
+                    alt="Fondo Servicios Premium"
+                    fill
+                    className="object-cover object-center opacity-40 mix-blend-screen"
+                />
+            </div>
+
+            {/* Decoración Gradientes */}
+            <div className="absolute bottom-0 left-0 w-[500px] h-[500px] rounded-full bg-red-900/20 blur-[120px] pointer-events-none" />
 
             <div className="max-w-7xl mx-auto relative z-10">
                 {/* Título */}
                 <AnimatedSection className="text-center mb-16">
-                    <span className="text-accent text-sm font-semibold uppercase tracking-widest">
+                    <span className="text-red-500 text-sm font-semibold uppercase tracking-widest drop-shadow-sm">
                         Nuestros Servicios
                     </span>
-                    <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold mt-3 mb-4 text-slate-900">
+                    <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold mt-3 mb-4 text-white drop-shadow-md">
                         Atención integral para{' '}
                         <span className="text-gradient">toda la familia</span>
                     </h2>
-                    <p className="text-slate-500 max-w-2xl mx-auto text-base sm:text-lg">
+                    <p className="text-slate-300 max-w-2xl mx-auto text-base sm:text-lg">
                         Ofrecemos 11 especialidades para cubrir todas tus necesidades de salud
                         bucal, desde prevención hasta rehabilitación completa.
                     </p>
@@ -56,18 +66,18 @@ export function ServicesSection() {
                                 <Link
                                     href={`/servicios/${servicio.slug}`}
                                     className={`
-                                        bg-white rounded-2xl p-6 sm:p-7 flex flex-col h-full group relative overflow-hidden cursor-pointer
-                                        border border-slate-100 shadow-[0_4px_24px_rgba(15,23,42,0.05)]
-                                        hover:shadow-[0_12px_40px_rgba(8,145,178,0.12)] hover:border-cyan-200/60
+                                        bg-black/30 backdrop-blur-md rounded-2xl p-6 sm:p-7 flex flex-col h-full group relative overflow-hidden cursor-pointer
+                                        border border-white/10 shadow-[0_4px_24px_rgba(0,0,0,0.5)]
+                                        hover:shadow-[0_12px_40px_rgba(220,38,38,0.2)] hover:border-red-500/30
                                         hover:-translate-y-1 transition-all duration-400
-                                        ${servicio.slug === 'odontologia-ninos' ? 'hover:bg-amber-50/30' : ''}
+                                        ${servicio.slug === 'odontologia-ninos' ? 'hover:bg-red-950/20' : ''}
                                     `}
                                 >
                                     {/* Efecto escáner para Rayos X */}
                                     {anim === 'scanner' && (
                                         <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none overflow-hidden rounded-2xl">
                                             <div
-                                                className="absolute inset-x-0 h-20 bg-gradient-to-b from-transparent via-emerald-200/25 to-transparent"
+                                                className="absolute inset-x-0 h-20 bg-gradient-to-b from-transparent via-red-500/20 to-transparent"
                                                 style={{ animation: 'scanner-sweep 2.5s ease-in-out infinite' }}
                                             />
                                         </div>
@@ -89,8 +99,8 @@ export function ServicesSection() {
                                             ${anim === 'bounce' ? 'group-hover:animate-[elastic-bounce_0.6s_ease-in-out]' : ''}
                                         `}
                                         style={{
-                                            background: `${servicio.colorHex}12`,
-                                            border: `1px solid ${servicio.colorHex}20`,
+                                            background: `rgba(220,38,38,0.1)`,
+                                            border: `1px solid rgba(220,38,38,0.2)`,
                                         }}
                                     >
                                         <Image
@@ -98,20 +108,20 @@ export function ServicesSection() {
                                             alt={servicio.titulo}
                                             width={50}
                                             height={50}
-                                            className="object-contain drop-shadow-[0_4px_10px_rgba(8,145,178,0.15)]"
+                                            className="object-contain drop-shadow-[0_4px_15px_rgba(220,38,38,0.3)] brightness-110"
                                         />
                                     </div>
 
                                     {/* Texto */}
-                                    <h3 className="font-display font-bold text-lg text-slate-800 mb-2 relative z-10">
+                                    <h3 className="font-display font-bold text-lg text-white mb-2 relative z-10">
                                         {servicio.titulo}
                                     </h3>
-                                    <p className="text-slate-400 text-sm leading-relaxed flex-1 relative z-10">
+                                    <p className="text-slate-300 text-sm leading-relaxed flex-1 relative z-10">
                                         {servicio.descripcionCorta}
                                     </p>
 
                                     {/* Link */}
-                                    <div className="flex items-center gap-2 mt-5 text-sm font-medium text-accent opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-300 relative z-10">
+                                    <div className="flex items-center gap-2 mt-5 text-sm font-medium text-red-400 opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-300 relative z-10">
                                         <span>Ver más</span>
                                         <ArrowRight size={14} />
                                     </div>

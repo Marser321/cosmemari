@@ -22,7 +22,7 @@ export const servicios: Servicio[] = [
         descripcionCorta:
             'Recuperá el blanco natural de tu sonrisa con técnicas profesionales seguras y resultados visibles desde la primera sesión.',
         descripcionLarga:
-            'Nuestro blanqueamiento dental profesional utiliza geles de última generación activados con luz LED de alta potencia. A diferencia de los kits caseros, el tratamiento es supervisado por el Dr. Mari para garantizar resultados uniformes de hasta 8 tonos más blancos, sin dañar el esmalte ni causar sensibilidad prolongada. Ideal para eliminar manchas de café, té, vino o tabaco.',
+            'Nuestro blanqueamiento dental profesional utiliza geles de última generación activados con luz LED de alta potencia. A diferencia de los kits caseros, el tratamiento es supervisado por nuestros especialistas para garantizar resultados uniformes de hasta 8 tonos más blancos, sin dañar el esmalte ni causar sensibilidad prolongada. Ideal para eliminar manchas de café, té, vino o tabaco.',
         beneficios: [
             'Hasta 8 tonos más blancos en una sola sesión',
             'Sin daño al esmalte dental',
@@ -74,7 +74,7 @@ export const servicios: Servicio[] = [
         descripcionCorta:
             'Transformá tu sonrisa con láminas ultrafinas de porcelana. Resultado natural, duradero y de diseño personalizado.',
         descripcionLarga:
-            'Las carillas dentales son láminas ultrafinas de porcelana o composite que se adhieren a la cara visible del diente, transformando por completo tu sonrisa. En nuestra clínica utilizamos porcelana de alta gama (e.max) que replica la translucidez natural del diente. El Dr. Mari trabaja con diseño digital de sonrisa (DSD) para mostrar el resultado antes de comenzar, asegurando que cada carilla se adapte a tu rostro y personalidad.',
+            'Las carillas dentales son láminas ultrafinas de porcelana o composite que se adhieren a la cara visible del diente, transformando por completo tu sonrisa. En nuestra clínica utilizamos porcelana de alta gama (e.max) que replica la translucidez natural del diente. Nuestro equipo trabaja con diseño digital de sonrisa (DSD) para mostrar el resultado antes de comenzar, asegurando que cada carilla se adapte a tu rostro y personalidad.',
         beneficios: [
             'Resultado estético natural e imperceptible',
             'Corrige color, forma, tamaño y alineación',
@@ -100,9 +100,9 @@ export const servicios: Servicio[] = [
         descripcionCorta:
             'Intervenciones quirúrgicas precisas y seguras. Extracciones complejas, muelas de juicio y más, con recuperación acelerada.',
         descripcionLarga:
-            'El Dr. Diego Mari cuenta con especialización en cirugía bucal, realizando desde extracciones simples hasta procedimientos complejos como remoción de muelas de juicio impactadas, cirugías preprotésicas y biopsias de tejidos blandos. Utilizamos técnicas mínimamente invasivas y protocolos de sedación para garantizar tu comodidad. La recuperación es rápida gracias a protocolos farmacológicos modernos.',
+            'Nuestro equipo cuenta con especialización en cirugía bucal, realizando desde extracciones simples hasta procedimientos complejos como remoción de muelas de juicio impactadas, cirugías preprotésicas y biopsias de tejidos blandos. Utilizamos técnicas mínimamente invasivas y protocolos de sedación para garantizar tu comodidad. La recuperación es rápida gracias a protocolos farmacológicos modernos.',
         beneficios: [
-            'Especialista con formación en Ucudal',
+            'Especialistas altamente capacitados',
             'Técnicas mínimamente invasivas',
             'Protocolos de recuperación acelerada',
             'Sedación consciente disponible',
@@ -126,7 +126,7 @@ export const servicios: Servicio[] = [
         descripcionCorta:
             'La solución definitiva para dientes perdidos. Implantes de titanio que se integran al hueso y funcionan como dientes naturales.',
         descripcionLarga:
-            'Los implantes dentales son raíces artificiales de titanio que se colocan en el hueso maxilar para reemplazar dientes perdidos. El Dr. Mari es especialista en cirugía y rehabilitación sobre implantes (Ucudal), lo que garantiza un manejo integral: desde la planificación quirúrgica digital hasta la corona final. Trabajamos con sistemas de implantes de primera línea mundial, ofreciendo garantía y seguimiento a largo plazo.',
+            'Los implantes dentales son raíces artificiales de titanio que se colocan en el hueso maxilar para reemplazar dientes perdidos. Nuestros profesionales son especialistas en cirugía y rehabilitación sobre implantes, lo que garantiza un manejo integral: desde la planificación quirúrgica digital hasta la corona final. Trabajamos con sistemas de implantes de primera línea mundial, ofreciendo garantía y seguimiento a largo plazo.',
         beneficios: [
             'Solución permanente y definitiva',
             'Sensación y función idéntica a un diente natural',
