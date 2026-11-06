@@ -4,7 +4,6 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'motion/react';
 import { Menu, X, Phone } from 'lucide-react';
-import { BookingModal } from '@/components/ui/BookingModal';
 
 const navLinks = [
     { label: 'Inicio', href: '#inicio' },
@@ -17,7 +16,6 @@ const navLinks = [
 export function Header() {
     const [scrolled, setScrolled] = useState(false);
     const [mobileOpen, setMobileOpen] = useState(false);
-    const [isBookingOpen, setIsBookingOpen] = useState(false);
 
     useEffect(() => {
         const onScroll = () => setScrolled(window.scrollY > 50);
@@ -76,12 +74,12 @@ export function Header() {
                                 <Phone size={16} />
                                 <span>Llamar</span>
                             </a>
-                            <button
-                                onClick={() => setIsBookingOpen(true)}
+                            <a
+                                href="#contacto"
                                 className="btn-primary text-sm !py-2.5 !px-5"
                             >
                                 Agendar Cita
-                            </button>
+                            </a>
                         </div>
 
                         {/* Hamburger Mobile */}
@@ -126,21 +124,21 @@ export function Header() {
                                     {link.label}
                                 </motion.a>
                             ))}
-                            <button
-                                onClick={() => {
-                                    setMobileOpen(false);
-                                    setIsBookingOpen(true);
-                                }}
+                            <motion.a
+                                href="#contacto"
+                                onClick={() => setMobileOpen(false)}
+                                initial={{ opacity: 0, scale: 0.9 }}
+                                animate={{ opacity: 1, scale: 1 }}
+                                transition={{ delay: 0.4 }}
                                 className="btn-primary mt-4 text-lg"
                             >
                                 Agendar Cita
-                            </button>
+                            </motion.a>
                         </motion.nav>
                     </motion.div>
                 )}
             </AnimatePresence>
 
-            <BookingModal isOpen={isBookingOpen} onClose={() => setIsBookingOpen(false)} />
         </>
     );
 }

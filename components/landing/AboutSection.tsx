@@ -3,7 +3,6 @@
 import { motion } from 'motion/react';
 import { AnimatedSection } from '@/components/ui/AnimatedSection';
 import { GraduationCap, Award, Briefcase, User } from 'lucide-react';
-import Image from 'next/image';
 
 const credenciales = [
     {
@@ -35,15 +34,8 @@ export function AboutSection() {
                     <AnimatedSection direction="left">
                         <div className="relative">
                             <div className="aspect-[3/4] rounded-2xl overflow-hidden bg-black/40 shadow-[0_8px_40px_rgba(0,0,0,0.5)] p-1 relative border border-white/10">
-                                <div className="w-full h-full relative flex items-center justify-center rounded-xl overflow-hidden">
-                                    <Image
-                                        src="/images/about-dentist.png"
-                                        alt="Odontólogo Especialista"
-                                        fill
-                                        className="object-cover"
-                                    />
-                                    {/* Overlay muy sutil para asegurar contraste y tono dark */}
-                                    <div className="absolute inset-0 bg-black/20 mix-blend-multiply pointer-events-none"></div>
+                                <div className="w-full h-full bg-white/5 flex items-center justify-center rounded-xl">
+                                    <User size={120} strokeWidth={1} className="text-slate-500" />
                                 </div>
                             </div>
 

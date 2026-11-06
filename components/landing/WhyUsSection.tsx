@@ -4,7 +4,6 @@ import { motion, useInView } from 'motion/react';
 import { useRef, useEffect, useState } from 'react';
 import { AnimatedSection, StaggerContainer, staggerItemVariants } from '@/components/ui/AnimatedSection';
 import { Clock, Users, Cpu, Heart } from 'lucide-react';
-import { TiltCard } from '@/components/ui/TiltCard';
 
 // Hook para contador animado
 function AnimatedCounter({ target, suffix = '' }: { target: number; suffix?: string }) {
@@ -88,7 +87,7 @@ export function WhyUsSection() {
                 <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-20">
                     {diferenciadores.map((item, i) => (
                         <motion.div key={i} variants={staggerItemVariants}>
-                            <TiltCard className="h-full bg-white rounded-2xl p-6 sm:p-8 group border border-slate-100 shadow-[0_4px_24px_rgba(15,23,42,0.05)] hover:shadow-[0_15px_50px_rgba(8,145,178,0.15)] hover:border-cyan-200/50 transition-colors duration-400">
+                            <motion.div whileHover={{ y: -5 }} className="h-full bg-white rounded-2xl p-6 sm:p-8 group border border-slate-100 shadow-[0_4px_24px_rgba(15,23,42,0.05)] hover:shadow-[0_15px_50px_rgba(8,145,178,0.15)] hover:border-cyan-200/50 transition-colors duration-400">
                                 <motion.div
                                     whileHover={{ scale: 1.1, rotate: 5 }}
                                     className="w-14 h-14 rounded-xl bg-cyan-50 border border-cyan-100 flex items-center justify-center mb-5 group-hover:bg-cyan-100 transition-colors duration-300 relative z-10"
@@ -101,7 +100,7 @@ export function WhyUsSection() {
                                 <p className="text-slate-400 text-sm leading-relaxed relative z-10">
                                     {item.descripcion}
                                 </p>
-                            </TiltCard>
+                            </motion.div>
                         </motion.div>
                     ))}
                 </StaggerContainer>

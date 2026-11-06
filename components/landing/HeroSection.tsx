@@ -10,15 +10,7 @@ export function HeroSection() {
             id="inicio"
             className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black"
         >
-            {/* Fondo de imagen generada con IA */}
             <div className="absolute inset-0 z-0">
-                <Image
-                    src="/images/hero-bg.png"
-                    alt="Clínica Dental Moderna Premium"
-                    fill
-                    className="object-cover object-center opacity-80"
-                    priority
-                />
                 {/* Overlay Oscuro y Gradiente Inferior para mezcla */}
                 <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/70 to-[#0A0A0A]"></div>
             </div>

@@ -26,16 +26,6 @@ const animacionEspecial: Record<string, string> = {
 export function ServicesSection() {
     return (
         <section id="servicios" className="section-padding relative overflow-hidden bg-[#0A0A0A]">
-            {/* Fondo decorativo generado con IA */}
-            <div className="absolute inset-0 z-0">
-                <Image
-                    src="/images/services-bg.png"
-                    alt="Fondo Servicios Premium"
-                    fill
-                    className="object-cover object-center opacity-40 mix-blend-screen"
-                />
-            </div>
-
             {/* Decoración Gradientes */}
             <div className="absolute bottom-0 left-0 w-[500px] h-[500px] rounded-full bg-red-900/20 blur-[120px] pointer-events-none" />
 
